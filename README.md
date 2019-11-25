@@ -12,7 +12,7 @@
 
 ## Getting Started
 
-```console
+```shell
 # pull source
 git clone https://github.com/andrew-j-roberts/components.git
 cd components
