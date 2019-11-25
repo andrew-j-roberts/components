@@ -12,4 +12,10 @@
 
 ## Getting Started
 
-`yarn run storybook`
+```console
+# pull source
+git clone https://github.com/andrew-j-roberts/components.git
+cd components
+# Start the component explorer, accessible at localhost:9009
+yarn run storybook
+```
