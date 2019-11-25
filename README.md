@@ -1,4 +1,4 @@
-# ajr-components
+# components
 
 **Goal:** build a well documented React component library that follows accessibility standards and implements the styled-system specification.
 
