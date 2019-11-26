@@ -1,13 +1,11 @@
 // src/components/Flex.js
 
 import React from "react";
-import styled from "@emotion/styled";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 import { space, color, layout, flexbox } from "styled-system";
 
-/**
- * Component that implements all options from styled-system's `flexbox` property
- */
-const Flex = styled.div(
+const Flexbox = styled.div(
   {
     boxSizing: "border-box",
     display: "flex",
@@ -19,4 +17,46 @@ const Flex = styled.div(
   space
 );
 
-export default Flex;
+/**
+ * renders a div that is styled with `display: flex`.  Exposed style prop categories: color, flexbox, layout, space.
+ */
+export default function Flex(props) {
+  return <Flexbox {...props}>{props.children}</Flexbox>;
+}
+
+Flex.propTypes = {
+  /** background */
+  bg: PropTypes.string,
+  /** margin */
+  m: PropTypes.string,
+  /** margin top */
+  mt: PropTypes.string,
+  /** margin right */
+  mr: PropTypes.string,
+  /** margin bottom*/
+  mb: PropTypes.string,
+  /** margin left*/
+  ml: PropTypes.string,
+  /** margin left and right*/
+  mx: PropTypes.string,
+  /** margin top and bottom*/
+  my: PropTypes.string,
+  /** padding*/
+  p: PropTypes.string,
+  /** padding top*/
+  pt: PropTypes.string,
+  /** padding right*/
+  pr: PropTypes.string,
+  /** padding bottom*/
+  pb: PropTypes.string,
+  /** padding left*/
+  pl: PropTypes.string,
+  /** padding left and right */
+  px: PropTypes.string,
+  /** padding top and bottom*/
+  py: PropTypes.string
+};
+
+Flex.defaultProps = {
+  bg: null
+};

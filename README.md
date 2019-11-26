@@ -4,7 +4,7 @@
 
 **Powered by these open source technologies:**
 
-- [Emotion](https://emotion.sh)
+- [styled components](https://www.styled-components.com/)
 - [Styled System](https://styled-system.com/)
 - [Storybook](https://storybook.js.org/)
 

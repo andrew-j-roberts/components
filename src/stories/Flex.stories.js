@@ -1,17 +1,47 @@
 // src/components/Task.stories.js
 
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-
+import styled from "styled-components";
 import Flex from "../components/Flex";
+
+const ChildElement = styled.div`
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: ${props => (props.height ? props.height : "50px")};
+  width: 50px;
+  background: #ccc;
+`;
 
 const children = (
   <>
-    <div>A</div>
-    <div>B</div>
-    <div>C</div>
+    <ChildElement height="100px">A</ChildElement>
+    <ChildElement height="75px">B</ChildElement>
+    <ChildElement>C</ChildElement>
   </>
 );
 
-storiesOf("Flex", module).add("default", () => <Flex>{children}</Flex>);
+// Component Story Format
+// https://storybook.js.org/docs/formats/component-story-format/
+// if you format the story export like this, Storybook auto generates the docs tab using their DocsPage addon
+export default {
+  title: "Flex",
+  component: Flex,
+  parameters: {
+    componentSubtitle: "Flexbox Layout component"
+  }
+};
+
+// stories
+export const row = () => <Flex>{children}</Flex>;
+
+export const column = () => <Flex flexDirection="column">{children}</Flex>;
+
+export const fillSpace = () => (
+  <div id="example-parent-div" style={{ height: "100px", width: "100px" }}>
+    <Flex bg="gray" width="100%" height="100%"></Flex>
+  </div>
+);
+
+export const verticallyCenteredRow = () => <Flex alignItems="center">{children}</Flex>;
