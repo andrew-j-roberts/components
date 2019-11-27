@@ -40,3 +40,5 @@ theme.space.medium = theme.space[2];
 theme.space.large = theme.space[3];
 // - fontSizes
 theme.fontSizes.body = theme.fontSizes[2];
+
+export default theme;

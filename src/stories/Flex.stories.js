@@ -1,8 +1,8 @@
-// src/components/Task.stories.js
+// src/components/Flex.stories.js
 
 import React from "react";
 import styled from "styled-components";
-import Flex from "../components/Flex";
+import { Flex } from "../components";
 
 const ChildElement = styled.div`
   border: 1px solid black;
@@ -29,7 +29,7 @@ export default {
   title: "Flex",
   component: Flex,
   parameters: {
-    componentSubtitle: "Flexbox Layout component"
+    componentSubtitle: "Flexbox layout component"
   }
 };
 
@@ -44,4 +44,6 @@ export const fillSpace = () => (
   </div>
 );
 
-export const verticallyCenteredRow = () => <Flex alignItems="center">{children}</Flex>;
+export const verticallyCenteredRow = () => (
+  <Flex alignItems="center">{children}</Flex>
+);
