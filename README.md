@@ -11,7 +11,7 @@
 
 ---
 
-## Getting Started
+## run storybook locally 
 
 ```shell
 # pull source
