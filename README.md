@@ -1,12 +1,13 @@
 # components
 
-**Goal:** build a well documented React component library that follows accessibility standards and implements the styled-system specification.
+**goal:** build a well documented React component library that uses an implementation of the System UI Theme Specification for its styling.
 
-**Powered by these open source technologies:**
+**powered by these open source technologies:**
 
-- [styled components](https://www.styled-components.com/)
-- [Styled System](https://styled-system.com/)
-- [Storybook](https://storybook.js.org/)
+- [styled-components](https://www.styled-components.com/)
+- [styled-system](https://styled-system.com/)
+- [reakit](https://reakit.io)
+- [storybook](https://storybook.js.org/)
 
 ---
 
