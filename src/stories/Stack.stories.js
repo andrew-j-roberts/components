@@ -21,7 +21,7 @@ export default {
   title: "Stack",
   component: Stack,
   parameters: {
-    componentSubtitle: "Adds space to each child element"
+    componentSubtitle: "Spaces child elements"
   }
 };
 

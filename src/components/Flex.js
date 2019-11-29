@@ -164,7 +164,3 @@ Flex.propTypes = {
   textShadow: PropTypes.string,
   boxShadow: PropTypes.string
 };
-
-Flex.defaultProps = {
-  bg: null
-};

@@ -1,10 +1,10 @@
 // .storybook/themeDecorator.js
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import theme from "../src/theme";
+import { LightTheme } from "../src/theme";
 
 const ThemeDecorator = storyFn => (
-  <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+  <ThemeProvider theme={LightTheme}>{storyFn()}</ThemeProvider>
 );
 
 export default ThemeDecorator;

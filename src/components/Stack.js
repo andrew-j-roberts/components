@@ -6,8 +6,9 @@ import Box from "./Box";
 import Flex from "./Flex";
 
 /**
- * Renders a Flex and spaces its child elements by wrapping each of them in a Box styled with the appropriate margin.
- * Child spacing is based on isColumn and isReversed prop shorthands.  Stack defaults to row, i.e. spacing applied to mr.
+ * Renders a Flex and wraps each of its child elements in a Box with one of its side's margin equaling the specified spacing.
+ * isColumn and isReversed determine which side the margin is applied to.
+ * `Stack` defaults to row, i.e. spacing applied to mr.
  */
 export default function Stack({
   isColumn,
@@ -43,6 +44,7 @@ export default function Stack({
       {React.Children.map(children, (child, i) => {
         return (
           <Box
+            // if element is last in the array, do not add styling
             mt={i == children.length - 1 ? null : marginTop}
             mr={i == children.length - 1 ? null : marginRight}
             mb={i == children.length - 1 ? null : marginBottom}
