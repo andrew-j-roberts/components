@@ -1,45 +1,39 @@
 {
-  "name": "components",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0",
-    "reakit": "^1.0.0-beta.13",
-    "styled-components": "^4.4.1",
-    "styled-system": "^5.1.2"
-  },
+  "name": "ajr-components",
+  "author": "Andrew Roberts",
+  "version": "0.1.27",
+  "private": false,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "dev": "nodemon --watch src --exec npm run build",
+    "build": "babel src/ -d dist",
+    "prepare": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@styled-system/css": "^5.1.4",
+    "@xstate/react": "^0.8.1",
+    "reakit": "^1.0.0-beta.13",
+    "styled-system": "^5.1.2",
+    "xstate": "^4.7.5"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-docs": "^5.2.6",
-    "@storybook/addon-knobs": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6",
-    "babel-loader": "^8.0.6"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "7.7.4",
+    "@reach/router": ">= 1.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": ">= 3"
   }
 }
